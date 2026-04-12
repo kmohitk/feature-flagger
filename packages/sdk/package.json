@@ -1,0 +1,41 @@
+{
+  "name": "@feature-flags/sdk",
+  "version": "0.1.0",
+  "description": "SDK to read feature flags in Node and React",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@feature-flags/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "keywords": ["feature-flags", "react"],
+  "license": "MIT"
+}
