@@ -1,6 +1,6 @@
 {
   "name": "feature-flags",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Private monorepo workspace — publishable packages: feature-flags-core, feature-flags-cli, feature-flags-sdk. Do not npm publish this root.",
   "packageManager": "pnpm@9.15.0",
