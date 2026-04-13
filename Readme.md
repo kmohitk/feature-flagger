@@ -32,8 +32,8 @@ But tools like LaunchDarkly are:
 ## 🎬 Demo (30 seconds)
 
 ```bash
-feature init
-feature enable newDashboard
+feature-flags init
+feature-flags enable newDashboard
 ```
 
 ```tsx
@@ -51,9 +51,11 @@ return enabled ? <NewUI /> : <OldUI />
 ## 📦 Install
 
 ```bash
-npm install feature-sdk
-npm install -D feature-cli
+npm install @kmohitk/sdk
+npm install -g @kmohitk/cli
 ```
+
+The global CLI binary is **`feature-flags`** (not the package scope).
 
 ---
 
@@ -62,7 +64,7 @@ npm install -D feature-cli
 ### 1. Initialize
 
 ```bash
-feature init
+feature-flags init
 ```
 
 Creates:
@@ -76,9 +78,9 @@ Creates:
 ### 2. Toggle Features
 
 ```bash
-feature enable newUI
-feature disable newUI
-feature list
+feature-flags enable newUI
+feature-flags disable newUI
+feature-flags list
 ```
 
 ---
@@ -86,7 +88,7 @@ feature list
 ### 3. Use in React
 
 ```tsx
-import { useFeature } from "feature-sdk/react"
+import { useFeature } from "@kmohitk/sdk/react"
 
 function App() {
   const newUI = useFeature("newUI")
@@ -100,7 +102,7 @@ function App() {
 ### 4. Use in Node
 
 ```ts
-import { isFeatureEnabled } from "feature-sdk"
+import { isFeatureEnabled } from "@kmohitk/sdk"
 
 if (isFeatureEnabled("newAPI")) {
   // new logic
@@ -139,7 +141,7 @@ Change a flag → UI updates immediately.
 ### ✅ CLI Control
 
 ```bash
-feature enable checkoutV2
+feature-flags enable checkoutV2
 ```
 
 ---
@@ -156,7 +158,7 @@ feature enable checkoutV2
 ### ✅ Optional Remote Sync
 
 ```bash
-feature sync https://your-api.com/flags
+feature-flags sync https://your-api.com/flags
 ```
 
 ---
@@ -215,11 +217,11 @@ QA can toggle features without code changes
 ## ⚙️ CLI Commands
 
 ```bash
-feature init
-feature list
-feature enable <flag>
-feature disable <flag>
-feature sync <url>
+feature-flags init
+feature-flags list
+feature-flags enable <flag>
+feature-flags disable <flag>
+feature-flags sync <url>
 ```
 
 ---
@@ -232,9 +234,9 @@ Publish the scoped packages **in dependency order** using **pnpm** (it rewrites 
 
 ```bash
 pnpm run build
-pnpm --filter @feature-flags/core publish --access public
-pnpm --filter @feature-flags/cli publish --access public
-pnpm --filter @feature-flags/sdk publish --access public
+pnpm --filter @kmohitk/core publish --access public
+pnpm --filter @kmohitk/cli publish --access public
+pnpm --filter @kmohitk/sdk publish --access public
 ```
 
 Or run the script:

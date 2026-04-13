@@ -1,10 +1,10 @@
 {
-  "name": "@feature-flags/cli",
+  "name": "@kmohitk/cli",
   "version": "0.1.0",
   "description": "CLI to manage local .featureflags.json",
   "type": "module",
   "bin": {
-    "feature": "./dist/index.js"
+    "feature-flags": "./dist/index.js"
   },
   "files": ["dist"],
   "scripts": {
@@ -16,7 +16,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@feature-flags/core": "workspace:*",
+    "@kmohitk/core": "workspace:*",
     "chalk": "^5.4.1",
     "commander": "^13.1.0"
   },

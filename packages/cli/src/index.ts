@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import { Command } from "commander"
 import chalk from "chalk"
-import { fetchRemoteFlags, readFlags, writeFlags } from "@feature-flags/core"
+import { fetchRemoteFlags, readFlags, writeFlags } from "@kmohitk/core"
 
 const program = new Command()
 
-program.name("feature").description("Feature flag CLI (local-first)").version("0.1.0")
+program.name("feature-flags").description("Feature flag CLI (local-first)").version("0.1.0")
 
 program
   .command("init")

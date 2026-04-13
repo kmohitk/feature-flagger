@@ -1,4 +1,4 @@
-import { isFeatureEnabled } from "@feature-flags/sdk"
+import { isFeatureEnabled } from "@kmohitk/sdk"
 
 if (isFeatureEnabled("newAPI")) {
   console.log("Using new API")

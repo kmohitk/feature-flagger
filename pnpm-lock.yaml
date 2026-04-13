@@ -10,7 +10,7 @@ importers:
 
   examples/node-app:
     dependencies:
-      '@feature-flags/sdk':
+      '@kmohitk/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
     devDependencies:
@@ -23,7 +23,7 @@ importers:
 
   examples/react-app:
     dependencies:
-      '@feature-flags/sdk':
+      '@kmohitk/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
       react:
@@ -51,7 +51,7 @@ importers:
 
   packages/cli:
     dependencies:
-      '@feature-flags/core':
+      '@kmohitk/core':
         specifier: workspace:*
         version: link:../core
       chalk:
@@ -79,7 +79,7 @@ importers:
 
   packages/sdk:
     dependencies:
-      '@feature-flags/core':
+      '@kmohitk/core':
         specifier: workspace:*
         version: link:../core
       react:
