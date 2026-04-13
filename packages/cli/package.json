@@ -1,12 +1,14 @@
 {
   "name": "feature-flags-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI to manage local .featureflags.json",
   "type": "module",
   "bin": {
     "feature-flags": "./dist/index.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json --watch"
@@ -20,6 +22,9 @@
     "chalk": "^5.4.1",
     "commander": "^13.1.0"
   },
-  "keywords": ["feature-flags", "cli"],
+  "keywords": [
+    "feature-flags",
+    "cli"
+  ],
   "license": "MIT"
 }

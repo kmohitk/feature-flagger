@@ -1,6 +1,6 @@
 {
   "name": "feature-flags-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SDK to read feature flags in Node and React",
   "type": "module",
   "main": "./dist/index.js",
@@ -15,7 +15,9 @@
       "import": "./dist/react.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json --watch"
@@ -36,6 +38,9 @@
       "optional": true
     }
   },
-  "keywords": ["feature-flags", "react"],
+  "keywords": [
+    "feature-flags",
+    "react"
+  ],
   "license": "MIT"
 }

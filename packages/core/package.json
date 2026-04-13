@@ -1,6 +1,6 @@
 {
   "name": "feature-flags-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Core storage, evaluation, and remote fetch for feature flags",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,7 +27,9 @@
       "import": "./dist/types.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json --watch"
@@ -36,6 +38,9 @@
     "@types/node": "^22.10.7",
     "typescript": "^5.7.3"
   },
-  "keywords": ["feature-flags", "feature-toggles"],
+  "keywords": [
+    "feature-flags",
+    "feature-toggles"
+  ],
   "license": "MIT"
 }
