@@ -224,6 +224,29 @@ feature sync <url>
 
 ---
 
+## 📤 Publishing to npm (maintainers)
+
+The **repo root** is a private workspace (`feature-flags`). It has **no publishable tarball** as a single package—do **not** run `npm publish` there. That led to `EBADSEMVER` / `invalid semver` because the root had no meaningful `version` for a release.
+
+Publish the scoped packages **in dependency order** using **pnpm** (it rewrites `workspace:*` to real versions in the packed `package.json`):
+
+```bash
+pnpm run build
+pnpm --filter @feature-flags/core publish --access public
+pnpm --filter @feature-flags/cli publish --access public
+pnpm --filter @feature-flags/sdk publish --access public
+```
+
+Or run the script:
+
+```bash
+pnpm run publish:packages
+```
+
+Use **`npm publish` only** inside a package folder **after** you manually replace `workspace:*` with a concrete semver (e.g. `"0.1.0"`); otherwise npm may reject the manifest.
+
+---
+
 ## 🏗️ Philosophy
 
 * **Local-first > cloud-first**
