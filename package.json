@@ -2,16 +2,16 @@
   "name": "feature-flags",
   "version": "0.0.0",
   "private": true,
-  "description": "Private monorepo workspace — publishable packages live under packages/ (@kmohitk/*). Do not npm publish this root.",
+  "description": "Private monorepo workspace — publishable packages: feature-flags-core, feature-flags-cli, feature-flags-sdk. Do not npm publish this root.",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "prepublishOnly": "node -e \"console.error('\\nThis root package is not published. From the repo root run:\\n  pnpm run publish:packages\\n'); process.exit(1)\"",
-    "build": "pnpm --filter @kmohitk/core build && pnpm --filter @kmohitk/cli build && pnpm --filter @kmohitk/sdk build",
+    "build": "pnpm --filter feature-flags-core build && pnpm --filter feature-flags-cli build && pnpm --filter feature-flags-sdk build",
     "dev": "pnpm -r --parallel run dev",
     "clean": "pnpm -r exec rm -rf dist",
     "example:react": "pnpm --filter example-react-app dev",
     "example:node": "pnpm --filter example-node-app start",
-    "publish:packages": "pnpm run build && pnpm --filter @kmohitk/core publish --access public && pnpm --filter @kmohitk/cli publish --access public && pnpm --filter @kmohitk/sdk publish --access public"
+    "publish:packages": "pnpm run build && pnpm --filter feature-flags-core publish --access public && pnpm --filter feature-flags-cli publish --access public && pnpm --filter feature-flags-sdk publish --access public"
   },
   "engines": {
     "node": ">=18"

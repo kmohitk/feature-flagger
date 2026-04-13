@@ -1,5 +1,5 @@
 {
-  "name": "@kmohitk/cli",
+  "name": "feature-flags-cli",
   "version": "0.1.0",
   "description": "CLI to manage local .featureflags.json",
   "type": "module",
@@ -16,7 +16,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@kmohitk/core": "workspace:*",
+    "feature-flags-core": "workspace:*",
     "chalk": "^5.4.1",
     "commander": "^13.1.0"
   },

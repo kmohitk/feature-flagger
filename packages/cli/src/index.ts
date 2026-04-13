@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander"
 import chalk from "chalk"
-import { fetchRemoteFlags, readFlags, writeFlags } from "@kmohitk/core"
+import { fetchRemoteFlags, readFlags, writeFlags } from "feature-flags-core"
 
 const program = new Command()
 

@@ -1,5 +1,5 @@
 {
-  "name": "@kmohitk/core",
+  "name": "feature-flags-core",
   "version": "0.1.0",
   "description": "Core storage, evaluation, and remote fetch for feature flags",
   "type": "module",

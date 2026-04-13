@@ -1,4 +1,4 @@
-import { getFlag } from "@kmohitk/core"
+import { getFlag } from "feature-flags-core"
 
 export function isFeatureEnabled(key: string, cwd?: string): boolean {
   return getFlag(key, cwd)
@@ -11,5 +11,5 @@ export {
   FLAG_FILENAME,
   fetchRemoteFlags,
   evaluateFlags,
-} from "@kmohitk/core"
-export type { FeatureFlags, FlagConfig } from "@kmohitk/core"
+} from "feature-flags-core"
+export type { FeatureFlags, FlagConfig } from "feature-flags-core"

@@ -51,11 +51,11 @@ return enabled ? <NewUI /> : <OldUI />
 ## 📦 Install
 
 ```bash
-npm install @kmohitk/sdk
-npm install -g @kmohitk/cli
+npm install feature-flags-sdk
+npm install -g feature-flags-cli
 ```
 
-The global CLI binary is **`feature-flags`** (not the package scope).
+The global CLI binary is **`feature-flags`** (from package `feature-flags-cli`).
 
 ---
 
@@ -88,7 +88,7 @@ feature-flags list
 ### 3. Use in React
 
 ```tsx
-import { useFeature } from "@kmohitk/sdk/react"
+import { useFeature } from "feature-flags-sdk/react"
 
 function App() {
   const newUI = useFeature("newUI")
@@ -102,7 +102,7 @@ function App() {
 ### 4. Use in Node
 
 ```ts
-import { isFeatureEnabled } from "@kmohitk/sdk"
+import { isFeatureEnabled } from "feature-flags-sdk"
 
 if (isFeatureEnabled("newAPI")) {
   // new logic
@@ -230,13 +230,13 @@ feature-flags sync <url>
 
 The **repo root** is a private workspace (`feature-flags`). It has **no publishable tarball** as a single package—do **not** run `npm publish` there. That led to `EBADSEMVER` / `invalid semver` because the root had no meaningful `version` for a release.
 
-Publish the scoped packages **in dependency order** using **pnpm** (it rewrites `workspace:*` to real versions in the packed `package.json`):
+Publish the **`feature-flags-*` packages** **in dependency order** using **pnpm** (it rewrites `workspace:*` to real versions in the packed `package.json`):
 
 ```bash
 pnpm run build
-pnpm --filter @kmohitk/core publish --access public
-pnpm --filter @kmohitk/cli publish --access public
-pnpm --filter @kmohitk/sdk publish --access public
+pnpm --filter feature-flags-core publish
+pnpm --filter feature-flags-cli publish
+pnpm --filter feature-flags-sdk publish
 ```
 
 Or run the script:

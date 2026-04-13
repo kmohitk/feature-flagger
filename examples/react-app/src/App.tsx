@@ -1,4 +1,4 @@
-import { useFeature } from "@kmohitk/sdk/react"
+import { useFeature } from "feature-flags-sdk/react"
 
 export default function App() {
   const newUI = useFeature("newUI")

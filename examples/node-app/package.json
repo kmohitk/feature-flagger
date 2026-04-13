@@ -6,7 +6,7 @@
     "start": "tsx src/index.ts"
   },
   "dependencies": {
-    "@kmohitk/sdk": "workspace:*"
+    "feature-flags-sdk": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.2",
